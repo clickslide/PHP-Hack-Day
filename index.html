@@ -10,7 +10,14 @@
 		<link rel="stylesheet" href="http://code.jquery.com/mobile/1.1.1/jquery.mobile-1.1.1.min.css" />
 <script src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
 <script src="http://code.jquery.com/mobile/1.1.1/jquery.mobile-1.1.1.min.js"></script>
-		
+		<script>
+			function addToSession(){
+				
+			}
+			function getCoupon(){
+				
+			}
+		</script>
 	</head>
 	<body>
 		<!-- Basic User Profile Page -->
@@ -24,7 +31,22 @@
 					<p class="userdata">
 						this is someone's profile page
 					</p>
-					<input id="username" type="checkbox" href="#" onClick="addToSession(User Name)"/>
+					<input id="username" type="checkbox" href="#" onClick="addToSession()" value="User Name"/>
+				</div>
+			</div>
+		</div>
+		
+		<!-- ENter name for coupon -->
+		<div dat-role="page" id="getCoupon">
+			<div id="header" data-role="header">
+				<h1>User Name</h1>
+			</div>
+			<div data-role="content">
+				<div class="profileContentHolder">
+					<form method="post" enctype="multipart/form-data" action="#">
+						<input type="text" name="username" value=""/>
+						<input id="username" type="submit" href="#" onClick="getCoupon()" value="Get Coupon"/>
+					</form>
 				</div>
 			</div>
 		</div>
