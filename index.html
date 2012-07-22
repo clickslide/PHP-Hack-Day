@@ -12,10 +12,28 @@
 <script src="http://code.jquery.com/mobile/1.1.1/jquery.mobile-1.1.1.min.js"></script>
 		<script>
 			function addToSession(){
-				
+				var username = $("#username").value();
+				$.ajax({
+				    type: "post", url: "test.php?addToSession=true&username="+username,
+				    success: function (data) {
+				    	alert(data);
+				    },
+				    error: function (request, status, error) {
+				        alert(error);
+				    }
+				});
 			}
 			function getCoupon(){
-				
+				var username = $("#usernameInput").value();
+				$.ajax({
+				    type: "post", url: "test.php?getCoupon=true&username="+username,
+				    success: function (data) {
+				    	alert(data);
+				    },
+				    error: function (request, status, error) {
+				        alert(error);
+				    }
+				});
 			}
 		</script>
 	</head>
@@ -45,7 +63,7 @@
 				<div class="profileContentHolder">
 					<form method="post" enctype="multipart/form-data" action="#">
 						<input type="text" name="username" value=""/>
-						<input id="username" type="submit" href="#" onClick="getCoupon()" value="Get Coupon"/>
+						<input id="usernameInput" type="submit" href="#" onClick="getCoupon()" value="Get Coupon"/>
 					</form>
 				</div>
 			</div>
